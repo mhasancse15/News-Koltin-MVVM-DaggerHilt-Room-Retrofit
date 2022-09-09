@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.mahmudul.newsapp.model.Article" />
+
+        <variable
+            name="article"
+            type="Article" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/list_item_root"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/image_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/text_view_list_item"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{article.title}"
+            android:layout_below="@+id/image_list_item"
+            android:padding="8dp" />
+
+    </RelativeLayout>
+</layout>
